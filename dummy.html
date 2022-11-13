@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .one_prod{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-sgerif;
+        border: 1px solid red;
+        width: 20%;
+        margin: auto;
+        text-align: center;
+        margin-bottom: 20px;
+        padding: 20px;
+    }
+</style>
+<body>
+    <a href="/violent-market-7865/cart.html">cart</a>
+    <div id="dummy"></div>
+
+</body>
+</html>
+<script>
+    const products=[
+        {
+            image:"https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjMxMjI1XC9SZWRfbl8xXzEuanBnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoxMDAsImhlaWdodCI6MTAwLCJmaXQiOiJjb250YWluIiwiYmFja2dyb3VuZCI6eyJyIjoyNTUsImciOjI1NSwiYiI6MjU1LCJhbHBoYSI6MX19fX0=",
+            name:"Watch",
+            color:"yellow",
+            price:2000
+        },
+        {
+            image:"https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjMxMjI1XC9SZWRfbl8xXzEuanBnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoxMDAsImhlaWdodCI6MTAwLCJmaXQiOiJjb250YWluIiwiYmFja2dyb3VuZCI6eyJyIjoyNTUsImciOjI1NSwiYiI6MjU1LCJhbHBoYSI6MX19fX0=",
+            name:"Watch",
+            color:"yellow",
+            price:1000
+        },
+        {
+            image:"https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjMxMjI1XC9SZWRfbl8xXzEuanBnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoxMDAsImhlaWdodCI6MTAwLCJmaXQiOiJjb250YWluIiwiYmFja2dyb3VuZCI6eyJyIjoyNTUsImciOjI1NSwiYiI6MjU1LCJhbHBoYSI6MX19fX0=",
+            name:"Watch",
+            color:"yellow",
+            price:3000
+        },
+        {
+            image:"https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjMxMjI1XC9SZWRfbl8xXzEuanBnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoxMDAsImhlaWdodCI6MTAwLCJmaXQiOiJjb250YWluIiwiYmFja2dyb3VuZCI6eyJyIjoyNTUsImciOjI1NSwiYiI6MjU1LCJhbHBoYSI6MX19fX0=",
+            name:"Watch",
+            color:"yellow",
+            price:200
+        }
+    ];
+
+    localStorage.setItem("data", JSON.stringify(products))
+    let data = JSON.parse(localStorage.getItem("data"))
+    const  append=(data)=>{
+        let product = document.getElementById("dummy");
+        product.innerHTML=null;
+        data.forEach(el => {
+        let div= document.createElement("div");
+        div.setAttribute("class", "one_prod");
+        let img=document.createElement("img");
+        img.src=el.image;
+        let n=document.createElement("p");
+        n.innerText=el.name;
+        let c = document.createElement("p");
+        c.innerText = `Color : ${el.color}`;
+        let p = document.createElement("p");
+        p.innerText = `your price : ₹ ${el.price}`;
+        let btn=document.createElement("button");
+        btn.innerText="add prod"
+        btn.onclick=()=>{
+            addtocart(el);
+        }
+            div.append(img,n,p,btn);
+            product.append(div)
+        });
+        
+        
+    }
+    append(data)
+
+    const addtocart = (el)=>{
+        let data = JSON.parse(localStorage.getItem("items"))||[]
+        data.push(el);
+        localStorage.setItem("items", JSON.stringify(data));  
+    }
+</script>

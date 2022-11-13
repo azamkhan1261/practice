@@ -1,0 +1,147 @@
+
+#cart{
+    display: flex;
+    width: 80%;
+    margin: auto; 
+    /* margin-top: 100px; */
+    gap: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-sgerif;
+}
+#cart #head {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #f2f2f2;
+    border: 0.5px solid grey;
+}
+#cart #head h3{
+    margin-left: 90px;
+}
+#cart_div{
+    flex: 3;
+    width: 100%;
+    margin: auto;
+    gap: 20px;  
+}
+#det_div{
+    flex: 1;
+    text-align: center;
+}
+#det_div #p_det{
+    border: 0.5px solid grey;
+}
+#product_details div{
+   padding: 10px;
+   height: auto
+}
+#product_details img{
+   float: left;
+   height: 100px;
+   margin-right: 130px;
+   margin-left: 30px;
+   margin-top: 20px;
+   
+}
+
+
+.p_price{
+    margin-left:50%;
+    margin-top: -60px;
+    position: absolute;
+    font-weight: 500;
+}
+/* #product_details button{
+   float: right;
+margin-top: -50px;
+}  */
+#checkout_details{
+    flex: 1;
+    border: 0.1px solid grey;
+    height: auto;
+    padding: 20px;
+    text-align: left;
+}
+.cart_prod{
+    border: 0.1px solid grey;
+}
+#u_line{
+    margin-top: 100px;
+    margin-left: 150px;
+    color: #f7941d;
+    font-weight: 600;
+}
+.boldprice{
+    font-weight:900;
+}
+#p_det{
+    background-color: #f2f2f2;
+}
+.vcart{
+    font-weight: 700;
+}
+.shipp{
+    border-bottom: 1px solid grey;
+    padding-bottom: 20px;
+}
+.check_btn{
+    width: 100%;
+    cursor: pointer;
+    background-color:#f7941d;
+    color:#fff;
+    padding:5px;
+    border-radius:3px;
+    font-size: 16px;
+    margin-top: 30px;
+}
+.empty{
+    text-align: center;
+    margin-top: 150px;
+}
+.remove{
+    background-color: #f7941d;
+    border-radius: 3px;
+    color: white;
+    padding: 2px;
+    margin-left: 0px;
+    margin-top: 25px;
+}
+.remove:hover{
+    background-color: rgb(238, 75, 75);
+    color: #fff;
+}
+.o_price{
+    margin-left: 35.5%;
+    margin-top: -60px;
+    position: absolute;
+    text-decoration:line-through;
+    font-weight: 600;
+    color:gray ;
+}
+.quantity{
+  margin-top: -18px;
+} 
+/* .quantity button{
+    /* margin-left: 50px; */
+/* }
+.pl{
+    font-size: 20px;
+    width: 20px;
+    
+    border: 1px solid red;
+    height: 22px;
+    padding: 5px;
+}
+.mi{
+    
+    width: 20px;
+    font-weight:600;
+    border: 1px solid red;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}*/ 
+.plv{
+    font-weight: 500;
+    text-align: center;
+    
+} 
